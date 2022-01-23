@@ -21,6 +21,4 @@ anosDesdeJulhoDe2020 = 1;
 idade = idade + anosDesdeJulhoDe2020; //somando variaveis
 console.log(idade);
 
-
-
-//Usar const sempre que possível é parte de Boas Práticas.
+//Usar const sempre que possível é parte de Boas Práticas, porém nem sempre é possível, em projetos reais, o uso de outros tipos de variáveis como let, é inevitável.
