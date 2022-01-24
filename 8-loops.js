@@ -7,24 +7,43 @@ const listaDeDestinos = new Array(
 );
 listaDeDestinos.push(`Curitiba`, `Afonso Cláudio`);
 
-const idadeComprador = 18;
-const estaAcompanhada = false;
-let temPassagemComprada = false;
-const destino = "Afonso Cláudio";
+console.log(`\n Destinos possíveis`);
+console.log(listaDeDestinos);
 
-let podeComprar = (idadeComprador >= 18 || estaAcompanhada == true)
+const idadeComprador = 12;
+const estaAcompanhada = true;
+let temPassagemComprada = false;
+const destino = "São Paulo";
+let destinoExiste = false;
+
+let podeComprar = (idadeComprador >= 18 || estaAcompanhada == true);
 let contador = 0;
 
 while(contador<5){  //ótimo para executar funções ENQUANTO (WHILE) suas condições forem atendidas. 
     if(listaDeDestinos[contador] == destino){
-        console.log("Destino existe");
-    }else{
-        console.log("Destino não existe");
+        destinoExiste = true;
+        break;
     }
     contador += 1;
 }
 
+if(destinoExiste == true){
+    console.log("Destino existe");
+}else{
+    console.log("Destino não existe");
+}
 
-console.log(`\n Destinos possíveis`);
-console.log(listaDeDestinos);
+if(podeComprar && destinoExiste){
+    console.log("Boa Viagem")
+}else{
+    console.log("Viagem não disponibilizada")
+} 
 
+
+for(let i = 0 ; i < 5; i++){
+    if(listaDeDestinos[i] == destino){
+        destinoExiste = true;
+    }
+}
+
+//FOR é como o while, porém no inicio, você declara a variável para a condição, em segundo a condição e em terceiro e último é o comando executado após o loop.
